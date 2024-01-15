@@ -3,6 +3,7 @@ import { Fira_Code } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const firaCode = Fira_Code({ subsets: ["latin"] });
 
@@ -17,13 +18,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={cn(firaCode.className, "bg-background h-dvh flex lg:p-10 p-4")}
-    >
-      <body className="bg-primary text-white rounded-md m-auto">
-        <Header />
-        {children}
+    <html lang="en" className="h-full">
+      <body className={cn(firaCode.className, "h-full w-full")}>
+        <main className="dark:bg-slate-950 bg-slate-300 w-full xl:p-10 p-3 h-full flex justify-center items-center">
+          <div
+            className="w-full rounded-md h-full bg-background"
+            style={{
+              maxWidth: "1782px",
+              maxHeight: "941px",
+            }}
+          >
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <Header />
+              {children}
+            </ThemeProvider>
+          </div>
+        </main>
       </body>
     </html>
   );
