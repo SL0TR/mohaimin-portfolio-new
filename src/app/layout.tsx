@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import Header from "@/components/Header";
 
 const firaCode = Fira_Code({ subsets: ["latin"] });
 

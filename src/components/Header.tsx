@@ -1,7 +1,5 @@
-import { ThemeToggle } from "../ThemeToggle";
-import { Button } from "../ui/button";
-import Navigation from "./Navigation";
-import { GrMenu } from "react-icons/gr";
+import Navigation from "@/components/Navigation";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function Header() {
   return (
