@@ -1,9 +1,9 @@
+import Hero from "@/components/Hero";
+
 export default function Home() {
   return (
-    <div className="flex h-full flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between text-sm lg:flex ">
-        <p>What up</p>
-      </div>
-    </div>
+    <section className="grow">
+      <Hero />
+    </section>
   );
 }

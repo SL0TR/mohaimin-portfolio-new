@@ -8,12 +8,12 @@ export const navOptions = [
     link: "/about",
   },
   {
-    name: "_experience",
-    link: "/experience",
+    name: "_experiences",
+    link: "/experiences",
   },
   {
-    name: "_project",
-    link: "/project",
+    name: "_projects",
+    link: "/projects",
   },
   {
     name: "_contact-me",
