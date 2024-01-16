@@ -12,16 +12,15 @@ export default function NavItem({
   item,
   isActive,
   onClick,
+  className,
   ...props
 }: MenuItemProps) {
-  console.log(item.name);
-
   return (
     <li
-      key={item.name}
       className={cn(
         "px-6 py-4 border-0 border-r-border xl:border-r border-b-2 border-b-transparent hover:border-b-amber-500 hover:text-foreground transition duration-150 ease-in text-slate-500",
-        isActive && "border-b-amber-500 text-foreground"
+        isActive && "border-b-amber-500 text-foreground",
+        className
       )}
       {...props}
     >

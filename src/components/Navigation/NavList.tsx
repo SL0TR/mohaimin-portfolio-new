@@ -1,31 +1,26 @@
 import { cn } from "@/lib/utils";
-import { ClassValue } from "clsx";
 import { NavList, RenderMenuItem } from "./types";
 
-type MenuItemsProps = {
-  items: NavList;
-  renderMenuItem: RenderMenuItem;
-  cnExtend?: string;
+type MenuItemsProps<T> = {
+  items: T[];
+  renderMenuItem: RenderMenuItem<T>;
 } & React.HTMLAttributes<HTMLUListElement>;
 
-export default function NavList({
+export default function NavList<T>({
   items,
-  cnExtend = "",
   renderMenuItem,
+  className,
   ...props
-}: MenuItemsProps) {
+}: MenuItemsProps<T>) {
   return (
     <ul
-      className={
-        cn(
-          "w-full flex flex-col xl:flex-rows absolute xl:static xl:flex-row -top-80 left-0 transition-all ease-in duration-200 opacity-0 xl:opacity-100"
-        ) + cn(cnExtend)
-      }
+      className={cn(
+        "w-full flex flex-col xl:flex-rows absolute xl:static xl:flex-row -top-80 left-0 transition-all ease-in-out duration-350 opacity-0 xl:opacity-100",
+        className
+      )}
       {...props}
     >
-      {items.map((item) => {
-        return renderMenuItem(item);
-      })}
+      {items.map((item) => renderMenuItem(item))}
     </ul>
   );
 }

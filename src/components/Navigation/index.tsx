@@ -26,12 +26,13 @@ export default function Navigation() {
       <nav>
         <NavList
           items={navOptions}
-          cnExtend={cn(
+          className={cn(
             isNavMenuOpen &&
               "z-20 bg-background top-16 max-maxHeight opacity-100"
           )}
           renderMenuItem={(menuItem) => (
             <NavItem
+              key={menuItem.link}
               item={menuItem}
               isActive={pathname === menuItem.link}
               onClick={toggleNavMenu}
@@ -42,3 +43,5 @@ export default function Navigation() {
     </div>
   );
 }
+
+export { NavToggle, NavList, NavItem };
