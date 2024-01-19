@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const firaCode = Fira_Code({ subsets: ["latin"] });
 
@@ -36,6 +37,7 @@ export default function RootLayout({
             >
               <Header />
               {children}
+              <Footer />
             </ThemeProvider>
           </div>
         </main>
