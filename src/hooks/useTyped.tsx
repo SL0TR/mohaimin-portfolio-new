@@ -11,7 +11,7 @@ function useTyped({ strings, ...typedOptions }: UseTypedProps) {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings,
-      typeSpeed: 50,
+      typeSpeed: 80,
       fadeOut: true,
       loop: true,
       ...typedOptions,

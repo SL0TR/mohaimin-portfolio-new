@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning={true} lang="en" className="h-full">
-      <body className={cn(firaCode.className, "h-full w-full")}>
+      <body className={cn(firaCode.className, "!h-full w-full")}>
         <main className="dark:bg-slate-950 bg-slate-300 w-full xl:p-10 p-3 h-full flex justify-center items-center">
           <div
             className="w-full rounded-md h-full bg-background flex flex-col"
