@@ -1,29 +1,27 @@
 "use client";
 import DynamicCloud from "@/components/DynamicCloud";
-import React, { useState } from "react";
-import { allUniqueSlugs, getIconSlugs, makeTagsUnique } from "./helper";
-import { backendIconTags, frontEndTags, toolsIconTags } from "./tags";
+import { useState } from "react";
+import { makeTagsUnique } from "../helper";
+import { backendIconTags, frontEndTags, toolsIconTags } from "../tags";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { CloudTag } from "./types";
+import { CloudTag } from "../types";
 
-enum stacks {
+enum TechStack {
   FRONTEND = "frontend",
   BACKEND = "backend",
   TOOLS = "tools",
 }
 
-const stackTagMap: Record<stacks, CloudTag[]> = {
-  [stacks.FRONTEND]: frontEndTags,
-  [stacks.BACKEND]: backendIconTags,
-  [stacks.TOOLS]: toolsIconTags,
+const stackTagMap: Record<TechStack, CloudTag[]> = {
+  [TechStack.FRONTEND]: frontEndTags,
+  [TechStack.BACKEND]: backendIconTags,
+  [TechStack.TOOLS]: toolsIconTags,
 };
 
 export default function Skills() {
-  const [selectedStacks, setSelectedStacks] = useState<stacks[]>([
-    stacks.FRONTEND,
+  const [selectedStacks, setSelectedStacks] = useState<TechStack[]>([
+    TechStack.FRONTEND,
   ]);
-
-  console.log(selectedStacks, "selectedStacks");
 
   const getStackIconSlugs = () => {
     const slugs = selectedStacks.map((stack) => stackTagMap[stack]);
@@ -38,15 +36,18 @@ export default function Skills() {
           variant="outline"
           type="multiple"
           className="pb-6"
-          onValueChange={(value) => setSelectedStacks(value as stacks[])}
+          onValueChange={(value) => setSelectedStacks(value as TechStack[])}
         >
-          <ToggleGroupItem value={stacks.FRONTEND} aria-label="Toggle bold">
+          <ToggleGroupItem value={TechStack.FRONTEND} aria-label="Toggle bold">
             Frontend
           </ToggleGroupItem>
-          <ToggleGroupItem value={stacks.BACKEND} aria-label="Toggle italic">
+          <ToggleGroupItem value={TechStack.BACKEND} aria-label="Toggle italic">
             Backend
           </ToggleGroupItem>
-          <ToggleGroupItem value={stacks.TOOLS} aria-label="Toggle underline">
+          <ToggleGroupItem
+            value={TechStack.TOOLS}
+            aria-label="Toggle underline"
+          >
             Tools
           </ToggleGroupItem>
         </ToggleGroup>

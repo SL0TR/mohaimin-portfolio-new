@@ -1,6 +1,6 @@
 import { Panels } from "./types";
-import Summary from "./Summary";
-import Skills from "./Skills";
+import Summary from "./components/Summary";
+import Skills from "./components/Skills";
 
 export const initialPanels: Panels = [
   {

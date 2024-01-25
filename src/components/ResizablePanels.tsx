@@ -7,6 +7,7 @@ import {
   ResizablePanelGroup,
 } from "./ui/resizable";
 import { Panels } from "@/app/about/types";
+import Reset from "@/components/Reset";
 
 type ResizablePanels = {
   initialPanels: Panels;
@@ -14,6 +15,7 @@ type ResizablePanels = {
 
 function ResizablePanels({ initialPanels }: ResizablePanels) {
   const [panels, setPanels] = useState<Panels>(initialPanels ?? []);
+  const shouldShowReset = !panels.length;
 
   const handleOnClose = (index: number) => {
     setPanels((currState) => {
@@ -23,24 +25,37 @@ function ResizablePanels({ initialPanels }: ResizablePanels) {
     });
   };
 
+  const handlePanelReset = () => {
+    setPanels(initialPanels);
+  };
+
   return (
     <ResizablePanelGroup direction="horizontal">
-      {panels.map((panel, idx) => (
-        <Fragment key={panel.title}>
-          <ResizablePanel
-            defaultSize={panel.defaultSize}
-            minSize={panel.minSize}
-            maxSize={panel.maxSize}
-          >
-            <SectionHeader
-              tabs={[{ title: panel.title }]}
-              onClose={() => handleOnClose(idx)}
-            />
-            <div className="h-full p-6 pl-10">{panel.content}</div>
-          </ResizablePanel>
-          {idx < panels.length - 1 && <ResizableHandle withHandle />}
-        </Fragment>
-      ))}
+      {panels.map((panel, idx) => {
+        // If the panel is not the last one, show a handle.
+        const shouldShowHandle = idx < panels.length - 1;
+        return (
+          <Fragment key={panel.title}>
+            <ResizablePanel
+              defaultSize={panel.defaultSize}
+              minSize={panel.minSize}
+              maxSize={panel.maxSize}
+            >
+              <SectionHeader
+                tabs={[{ title: panel.title }]}
+                onClose={() => handleOnClose(idx)}
+              />
+              <div className="h-full p-6 pl-10">{panel.content}</div>
+            </ResizablePanel>
+            {shouldShowHandle && <ResizableHandle withHandle />}
+          </Fragment>
+        );
+      })}
+      {shouldShowReset && (
+        <div className="flex justify-center items-center h-full w-full">
+          <Reset onClick={handlePanelReset} />
+        </div>
+      )}
     </ResizablePanelGroup>
   );
 }

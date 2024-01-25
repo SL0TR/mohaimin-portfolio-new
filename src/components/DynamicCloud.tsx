@@ -54,9 +54,7 @@ export type DynamicCloudProps = {
 
 export const DynamicCloud = ({ iconSlugs }: DynamicCloudProps) => {
   const [icons, setIcons] = useState<SimpleIcon[]>();
-  const matches = useMediaQuery("(max-width: 1400px)");
-
-  console.log(matches);
+  const isXlScreen = useMediaQuery("(min-width: 1400px)");
 
   useEffect(() => {
     fetchSimpleIcons({ slugs: iconSlugs }).then((data) => {
@@ -81,7 +79,7 @@ export const DynamicCloud = ({ iconSlugs }: DynamicCloudProps) => {
       ...{
         style: {
           width: "100%",
-          maxWidth: matches ? 350 : 600,
+          maxWidth: isXlScreen ? 600 : 350,
         },
       },
     },

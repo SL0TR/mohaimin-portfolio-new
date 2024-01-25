@@ -20,7 +20,7 @@ export default function Summary() {
         <p>
           About me I have 5 years of еxperience in web development lorem ipsum
           dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
         </p>
       </ScrollArea>
     </div>
