@@ -1,4 +1,5 @@
 import HeroArt from "./HeroArt";
+import HeroBg from "./HeroBg";
 import HeroIntro from "./HeroIntro";
 
 export default function Hero() {
