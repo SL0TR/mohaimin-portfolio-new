@@ -8,12 +8,9 @@ const linkBaseClassName =
 
 export default function Footer() {
   return (
-    <div
-      className="w-full flex border-t border-t-border justify-between"
-      flex-row
-    >
-      <div className="flex xl:pl-6 pl-4 w-full">
-        <h2 className="py-3 border-r border-border xl:pr-4 pr-2  max-sm:grow">
+    <div className="w-full flex border-t border-t-border justify-between">
+      <div className="flex xl:pl-6 pl-4">
+        <h2 className="py-3 border-r border-border xl:pr-4 pr-2 max-sm:grow">
           Find me in:
         </h2>
         <div className="flex flex-row justify-start items-center h-full">

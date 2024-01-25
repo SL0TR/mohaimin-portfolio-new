@@ -27,7 +27,10 @@ export default function Navigation() {
       <NavItem
         key={navItem.link}
         item={navItem}
-        className={cn(isActive && "border-b-amber-500 text-foreground")}
+        className={cn(
+          isActive &&
+            "border-b-amber-600 dark:border-b-lime-600 text-foreground"
+        )}
       />
     );
   };

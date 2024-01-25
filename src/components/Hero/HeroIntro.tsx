@@ -19,12 +19,12 @@ export default function HeroIntro() {
       <div className="mt-10 flex items-center">
         <Link href={process.env.RESUME_DOWNLOAD_LINK || ""} download>
           <Button>
-            <FiDownload className="mr-2 h-4 w-4" /> My Resume
+            <FiDownload className="mr-2 h-4 w-4 animate-bounce" /> My Resume
           </Button>
         </Link>
         <Link href="/about">
           <Button className="ml-6" variant="link">
-            About Me
+            Learn more
           </Button>
         </Link>
       </div>

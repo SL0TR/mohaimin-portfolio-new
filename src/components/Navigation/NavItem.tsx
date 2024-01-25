@@ -16,7 +16,7 @@ export default function NavItem({
   return (
     <li
       className={cn(
-        "px-6 py-4 border-0 border-r-border xl:border-r border-b-2 border-b-transparent hover:border-b-amber-500 hover:text-foreground transition duration-150 ease-in text-slate-500",
+        "px-6 py-4 border-0 border-r-border xl:border-r border-b-2 border-b-transparent hover:border-b-amber-600 dark:hover:border-b-lime-600 hover:text-foreground transition duration-150 ease-in text-slate-500",
         className
       )}
       {...props}
