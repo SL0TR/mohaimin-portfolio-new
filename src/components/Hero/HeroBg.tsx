@@ -11,6 +11,7 @@ export default function HeroBg({ className }: HeroBgProps) {
       alt="hero-bg"
       className={cn("absolute top-0 right-0", className)}
       width={900}
+      priority
     />
   );
 }

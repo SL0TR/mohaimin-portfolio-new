@@ -26,9 +26,9 @@ export default function HeroIntro() {
             <FiDownload className="mr-2 h-4 w-4 animate-bounce" /> My Resume
           </Button>
         </Link>
-        <Link href="/about">
+        <Link href="/about-me">
           <Button className="ml-6" variant="link">
-            Learn more
+            About me
           </Button>
         </Link>
       </div>

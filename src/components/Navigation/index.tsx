@@ -41,6 +41,7 @@ export default function Navigation() {
         <Drawer>
           <DrawerTrigger>
             <GrMenu className="text-slate-500" />
+            <span className="sr-only">Toggle Navigation menu</span>
           </DrawerTrigger>
           <DrawerContent>
             <DrawerHeader>

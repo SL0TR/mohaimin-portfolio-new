@@ -23,6 +23,7 @@ export default function Footer() {
               className={cn(linkBaseClassName, "border-r border-r-border ")}
             >
               {socialMediaOption.icon}
+              <span className="sr-only">{socialMediaOption.name} profile</span>
             </Link>
           ))}
         </div>
@@ -35,6 +36,7 @@ export default function Footer() {
       >
         <p className="mr-2 hidden xl:block">@mohaimin</p>
         <FaGithub />
+        <span className="sr-only">Github profile</span>
       </Link>
     </div>
   );

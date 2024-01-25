@@ -5,11 +5,11 @@ export const navOptions = [
   },
   {
     name: "_about-me",
-    link: "/about",
+    link: "/about-me",
   },
   {
-    name: "_experiences",
-    link: "/experiences",
+    name: "_experience",
+    link: "/experience",
   },
   {
     name: "_projects",
