@@ -6,7 +6,7 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "./ui/resizable";
-import { Panels } from "@/app/about/types";
+import { Panels } from "@/app/about-me/types";
 import Reset from "@/components/Reset";
 
 type ResizablePanels = {
