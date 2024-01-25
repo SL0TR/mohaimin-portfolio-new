@@ -40,12 +40,13 @@ function ResizablePanels({ initialPanels }: ResizablePanels) {
               defaultSize={panel.defaultSize}
               minSize={panel.minSize}
               maxSize={panel.maxSize}
+              className="flex flex-col"
             >
               <SectionHeader
                 tabs={[{ title: panel.title }]}
                 onClose={() => handleOnClose(idx)}
               />
-              <div className="h-full p-6 pl-10">{panel.content}</div>
+              <div className="grow">{panel.content}</div>
             </ResizablePanel>
             {shouldShowHandle && <ResizableHandle withHandle />}
           </Fragment>

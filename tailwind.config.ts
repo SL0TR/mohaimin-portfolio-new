@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        "xl-mobile": { raw: "((min-height: 700px) and (max-height: 1000px))" },
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

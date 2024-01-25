@@ -20,3 +20,11 @@ export const allUniqueSlugs = makeTagsUnique([
   // ...mobileIconsTags,
   ...toolsIconTags,
 ]);
+
+export const calculateYearsOfExperience = () => {
+  const fromYear = 2017;
+  const today = new Date();
+  const currentYear = today.getFullYear();
+
+  return currentYear - fromYear;
+};

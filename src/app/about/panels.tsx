@@ -6,7 +6,7 @@ export const initialPanels: Panels = [
   {
     title: "Summary",
     content: (
-      <div className="h-full p-6 pl-10">
+      <div className="h-full">
         <Summary />
       </div>
     ),
