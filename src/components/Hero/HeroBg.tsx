@@ -9,7 +9,7 @@ export default function HeroBg({ className }: HeroBgProps) {
     <Image
       src={bgImage}
       alt="hero-bg"
-      className={cn("absolute top-0 right-0", className)}
+      className={cn("absolute top-0 right-0 z-1", className)}
       width={900}
       priority
     />
