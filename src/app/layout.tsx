@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const firaCode = Fira_Code({ subsets: ["latin"] });
 
@@ -38,6 +39,7 @@ export default function RootLayout({
               <Header />
               {children}
               <Footer />
+              <Analytics />
             </ThemeProvider>
           </div>
         </main>
