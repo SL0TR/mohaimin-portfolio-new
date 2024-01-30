@@ -79,7 +79,7 @@ export const DynamicCloud = ({ iconSlugs }: DynamicCloudProps) => {
       ...{
         style: {
           width: "100%",
-          maxWidth: isXlScreen ? 600 : 350,
+          maxWidth: isXlScreen ? 470 : 320,
         },
       },
     },

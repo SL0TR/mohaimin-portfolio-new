@@ -11,7 +11,8 @@ export default function Summary() {
             <p className="text-amber-600 2xl:text-lg text-sm">
               <span className="text-indigo-400">const </span>
               <span className="text-indigo-500"> {section.title} </span>
-              <span className="text-indigo-400"> = </span>`{section.content}`
+              <span className="text-indigo-400 dark:font-thin "> = </span>`
+              <span className="font-thin">{section.content}`</span>
               <span className="dark:text-indigo-200 text-indigo-400">;</span>
             </p>
           </div>
