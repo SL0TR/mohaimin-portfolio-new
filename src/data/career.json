@@ -1,0 +1,99 @@
+{
+  "timeline": [
+    {
+      "company": "Crowdlinker",
+      "link": "https://crowdlinker.com/",
+      "position": "Senior Full Stack Developer",
+      "date": "Jan 2022 - Present",
+      "startDate": "2022-01-01",
+      "endDate": null,
+      "type": "Full Time",
+      "location": "Toronto, ON, Canada",
+      "description": "We partner with forward-thinking businesses to solve their most complex challenges with strategy, design, and technology",
+      "duties": []
+    },
+    {
+      "company": "Strativ AB",
+      "link": "https://strativ.se/",
+      "position": "Senior Full Stack Developer (Team Lead)",
+      "date": "May 2020 - Jan 2022",
+      "startDate": "2020-05-01",
+      "endDate": "2022-01-01",
+      "location": "Stockholm, Sweden (Remote)",
+      "type": "Full Time",
+      "description": "At Strativ, we have cracked the code! By combining talented developers and experienced project managers and rigorous quality assurance from our office in Stockholm, we deliver the best of both worlds, cutting edge software with the highest quality.",
+      "duties": []
+    },
+
+    {
+      "company": "Shastho AI",
+      "link": "https://shastho.ai/",
+      "position": "Frontend Engineer",
+      "date": "Jan 2020 - May 2020",
+      "startDate": "2020-01-01",
+      "endDate": "2020-05-01",
+      "location": "Remote",
+      "type": "Contract",
+      "description": "The one stop solution for managing healthcare in the most convenient way. It's simple and easy to provide healthcare in the fastest way possible.",
+      "duties": []
+    },
+    {
+      "company": "Halkhata",
+      "link": "https://www.9apps.com/android-apps/com-halkhata/",
+      "position": "Full Stack Developer",
+      "date": "Oct 2019 - Dec 2020",
+      "startDate": "2019-10-01",
+      "endDate": "2020-12-01",
+      "type": "Part Time",
+      "location": "Remote",
+      "description": "Digitize your business using the Halkhata app and manage all your transactions simply and effortlessly. Manage all your Credit with customers/suppliers as well as business cash flow, income, and expenditures all in one place",
+      "duties": []
+    },
+    {
+      "company": "Roar Global",
+      "link": "https://roar.global/",
+      "position": "Software Engineer",
+      "date": "Sep 2019 - Apr 2020",
+      "startDate": "2019-09-01",
+      "endDate": "2020-04-01",
+      "location": "Dhaka, Bangladesh",
+      "type": "Full Time",
+      "description": "Roar Global is a media network founded in Sri Lanka. We build, operate and invest in distinct media brands that produce ground-breaking content and media solutions for a South Asian audience.",
+      "duties": []
+    },
+    {
+      "company": "Notionhive",
+      "link": "https://notionhive.com/",
+      "position": "Frontend Engineer",
+      "date": "Jul 2018 - Jul 2019",
+      "location": "Dhaka, Bangladesh",
+      "type": "Full Time",
+      "description": "Notionhive is a top digital marketing agency in Bangladesh that provides digital marketing, branding, video, design, and UI/UX solutions, and services.",
+      "duties": []
+    },
+    {
+      "company": "IDEEZA",
+      "link": "https://ideeza.com/",
+      "position": "Frontend Engineer",
+      "date": "Jan 2018 - Jun 2018",
+      "startDate": "2018-01-01",
+      "endDate": "2018-06-01",
+      "location": "Remote",
+      "type": "Full Time",
+      "description": "Meet IDEEZA, the only generative AI tool for Hardware product engineering that turns text into a blueprint in seconds. PLUS, mints it on top of blockchain for ownership recognition and future monetization!",
+      "duties": []
+    },
+    {
+      "company": "Junior Frontend Developer",
+      "link": "https://www.deliveryhobe.com/",
+      "position": "Frontend Engineer",
+      "date": "May 2017 - Jan 2018",
+      "startDate": "2017-05-01",
+      "endDate": "2018-01-01",
+      "location": "Dhaka, Bangladesh",
+      "type": "Full Time",
+      "description": "Started to help out the residents of Dhaka during COVID, we've ended up delivering 160k orders, serving 100k+ fans and bringing in $1M+ in sales for our local shops",
+      "duties": []
+    }
+  ]
+}

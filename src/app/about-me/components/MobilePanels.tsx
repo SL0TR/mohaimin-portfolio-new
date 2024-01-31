@@ -12,7 +12,7 @@ const initialTabs: TabItem[] = [
 
 const tabContentMap: Record<number, ReactNode> = {
   0: (
-    <div className="p-6 h-full mt-2">
+    <div className="h-full mt-2">
       <Summary />
     </div>
   ),

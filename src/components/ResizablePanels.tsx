@@ -6,7 +6,7 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "./ui/resizable";
-import { Panels } from "@/app/about-me/types";
+import { Panels } from "@/app/types";
 import Reset from "@/components/Reset";
 
 type ResizablePanels = {
@@ -46,7 +46,7 @@ function ResizablePanels({ initialPanels }: ResizablePanels) {
                 tabs={[{ title: panel.title }]}
                 onClose={() => handleOnClose(idx)}
               />
-              <div className="grow">{panel.content}</div>
+              <div className="h-full">{panel.content}</div>
             </ResizablePanel>
             {shouldShowHandle && <ResizableHandle withHandle />}
           </Fragment>

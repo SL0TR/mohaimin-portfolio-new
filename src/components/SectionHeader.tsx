@@ -29,16 +29,23 @@ export default function SectionHeader({
           )}
           onClick={() => onClick?.(idx)}
         >
-          <p className="dark:text-lime-500 text-amber-600 text-sm cursor cursor-grab">
+          <p
+            className={cn(
+              "dark:text-lime-500 text-amber-600 text-sm cursor cursor-grab",
+              !onClose && "pr-6"
+            )}
+          >
             {tab.title}
           </p>
-          <IoCloseOutline
-            className="text-slate-600 ml-2 mr-2 dark:hover:text-slate-300 hover:text-slate-800 transition-colors ease-in-out cursor-pointer"
-            onClick={(e) => {
-              e.stopPropagation();
-              onClose?.(idx);
-            }}
-          />
+          {onClose && (
+            <IoCloseOutline
+              className="text-slate-600 ml-2 mr-2 dark:hover:text-slate-300 hover:text-slate-800 transition-colors ease-in-out cursor-pointer"
+              onClick={(e) => {
+                e.stopPropagation();
+                onClose?.(idx);
+              }}
+            />
+          )}
         </button>
       ))}
     </div>

@@ -1,17 +1,19 @@
 "use client";
 import useTyped from "@/hooks/useTyped";
 
+const words = [
+  "Hi!",
+  "Bonjour!",
+  "হ্যালো!",
+  "Hola!",
+  "こんにちは!",
+  "你好!",
+  "Hola!",
+];
+
 function Greeting() {
   const el = useTyped({
-    strings: [
-      "Hi!",
-      "Bonjour!",
-      "হ্যালো!",
-      "Hola!",
-      "こんにちは!",
-      "你好!",
-      "Hola!",
-    ],
+    strings: words,
   });
   return (
     <h1>

@@ -3,26 +3,6 @@
 @tailwind utilities;
 
 
-html {
-  /* TODO: Do not use this, fix the issue for the y axis scroll */
-  overflow-y: hidden;
-}
-
-body {
-  /* max-height: 941px;
-  height: 100%;
-  max-width: 1782px;
-  width: 100%; */
-}
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -92,12 +72,43 @@ body {
     --ring: 212.7 26.8% 83.9%;
   }
 }
- 
+
+@layer utilities {
+  .ltr {
+    direction: ltr;
+  }
+   
+  .rtl {
+    direction: rtl;
+  }
+}
+
+
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .timeline:before {
+     left: 8px;
+     width: 2px;
+  }
+  .timeline-block {
+     width: 100%;
+     margin-bottom: 30px;
+  }
+  .timeline-block-right {
+     float: none;
+  }
+
+  .timeline-block-left {
+     float: none;
+     direction: ltr;
   }
 }

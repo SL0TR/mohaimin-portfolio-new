@@ -4,20 +4,19 @@ import { summarySections } from "./summarySections";
 export default function Summary() {
   // TODO: Add line numbers to the left of the text.
   return (
-    <div className="flex flex-col h-full xl:justify-center items-center ">
-      <ScrollArea className="h-[430px] md:h-[350px] 2xl:h-[auto] md:px-6 2xl:px-10 xl-mobile:h-[600px]">
-        {summarySections.map((section) => (
-          <div key={section.title} className="mb-4">
-            <p className="text-amber-600 2xl:text-lg text-sm">
-              <span className="text-indigo-400">const </span>
-              <span className="text-indigo-500"> {section.title} </span>
-              <span className="text-indigo-400 dark:font-thin "> = </span>`
-              <span className="font-thin">{section.content}`</span>
-              <span className="dark:text-indigo-200 text-indigo-400">;</span>
-            </p>
-          </div>
-        ))}
-      </ScrollArea>
-    </div>
+    <ScrollArea className="px-4 xl:px-10 flex justify-center mt-5 2xl:mt-20 mb-10">
+      {summarySections.map((section) => (
+        <div key={section.title} className="mb-4">
+          <p className="text-amber-600 2xl:text-lg text-sm">
+            <span className="text-indigo-400">const </span>
+            <span className="text-indigo-500"> {section.title} </span>
+            <span className="text-indigo-400 dark:font-thin "> = </span>`
+            <span className="font-thin">{section.content}`</span>
+            <span className="dark:text-indigo-200 text-indigo-400">;</span>
+          </p>
+        </div>
+      ))}
+      <div className="h-[50px]"></div>
+    </ScrollArea>
   );
 }

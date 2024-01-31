@@ -1,8 +1,8 @@
-import { Panels } from "./types";
 import Summary from "./components/Summary";
 import Skills from "./components/Skills";
+import { Panels } from "../types";
 
-export const initialPanels: Panels = [
+export const aboutMePanels: Panels = [
   {
     title: "Summary",
     content: (
