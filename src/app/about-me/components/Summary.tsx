@@ -1,8 +1,6 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { summarySections } from "./summarySections";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { IoOpenOutline } from "react-icons/io5";
 
 export default function Summary() {
   // TODO: Add line numbers to the left of the text.
@@ -22,7 +20,10 @@ export default function Summary() {
       <div className="w-full">
         <p className="text-amber-600 2xl:text-lg text-sm">
           <span className="text-indigo-400">const </span>
-          <span className="text-indigo-500"> career </span>
+          <span className="text-indigo-500 lg:hidden">experience</span>
+          <span className="text-indigo-500 hidden lg:inline">
+            experienceUrl
+          </span>
           <span className="text-indigo-400 dark:font-thin "> = </span>`
           <span className="font-thin underline break-words 2xl:text-lg md:text-sm text-xs">
             <Link href="/experience" passHref>

@@ -10,7 +10,7 @@ export const aboutMePanels: Panels = [
         <Summary />
       </div>
     ),
-    defaultSize: 40,
+    defaultSize: 50,
     minSize: 30,
   },
   {
@@ -20,7 +20,7 @@ export const aboutMePanels: Panels = [
         <Skills />
       </div>
     ),
-    defaultSize: 60,
+    defaultSize: 50,
     minSize: 30,
   },
 ];

@@ -4,7 +4,7 @@ const yearsOfExperience = calculateYearsOfExperience();
 
 export const summarySections = [
   {
-    title: "experience",
+    title: "intro",
     content: `I am a seasoned Full Stack Developer based in Toronto with nearly ${yearsOfExperience} years of professional
     experience. My focus is on architecting and delivering
     high-performance software that not only meets but exceeds user
