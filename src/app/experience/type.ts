@@ -1,5 +1,3 @@
-export type CareerTimelineType = "Full Time" | "Part Time" | "Contract";
-
 export type CareerTimelineItem = {
   company: string;
   link: string;
@@ -8,6 +6,6 @@ export type CareerTimelineItem = {
   description: string;
   image?: string;
   duties?: string[];
-  type: CareerTimelineType;
+  type: string;
   location: string;
 };
