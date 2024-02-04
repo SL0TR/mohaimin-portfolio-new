@@ -44,6 +44,7 @@ export default function TimelineCard({ item, side }: TimelineCardProps) {
         <CardContent className="grid gap-4 ltr">
           <Duties items={item.duties} />
         </CardContent>
+        <div className="flex flex-row"></div>
       </Card>
     </>
   );

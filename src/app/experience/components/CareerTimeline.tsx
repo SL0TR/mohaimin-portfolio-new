@@ -5,10 +5,10 @@ import {
   TimelineContent,
   TimelineMarker,
 } from "@/components/ui/timeline";
-import career from "@/data/career.json";
 import { cn } from "@/lib/utils";
 import TimelineCard from "./TimelineCard";
 import { PiShootingStarThin } from "react-icons/pi";
+import careerTimeline from "../timeline";
 
 export default function CareerTimeline() {
   return (
@@ -17,7 +17,7 @@ export default function CareerTimeline() {
         <PiShootingStarThin className="dark:text-amber-700 text-amber-500 text-2xl 2xl:text-5xl animate-pulse" />
       </div>
       <Timeline className="p-10 my-10 max-md:p-0">
-        {career.timeline.map((item, index) => {
+        {careerTimeline.map((item, index) => {
           const isOdd = index % 2 === 0;
           const side = isOdd ? "left" : "right";
 

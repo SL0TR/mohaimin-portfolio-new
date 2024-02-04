@@ -34,7 +34,7 @@ export default function Summary() {
           <span className="dark:text-indigo-200 text-indigo-400 ">;</span>
         </p>
       </div>
-      <div className="h-[50px]" />
+      <div className="h-[100px]" />
     </ScrollArea>
   );
 }

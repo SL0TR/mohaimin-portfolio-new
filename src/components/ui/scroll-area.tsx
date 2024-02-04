@@ -27,7 +27,7 @@ const ScrollArea = React.forwardRef<
         ref={ref}
         className={cn("relative overflow-hidden", className)}
         style={{
-          height: height ? `${height - 40}px` : "100%",
+          height: height ? `${height}px` : "100%",
         }}
         {...props}
       >

@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import { FaRegMoon } from "react-icons/fa";
 import { LuSunMedium } from "react-icons/lu";
 import { Button } from "@/components/ui/button";
-import { ModeTheme } from "@/enums/theme";
+import { ModeTheme } from "@/enums";
 
 type ThemeToggleProps = React.ComponentProps<typeof Button>;
 

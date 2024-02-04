@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      gridTemplateColumns: {
+        "auto-fit-30": "repeat(auto-fit, minmax(30rem, 1fr))",
+        "auto-fit-18": "repeat(auto-fit, minmax(18rem, 1fr))",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

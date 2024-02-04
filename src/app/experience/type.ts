@@ -1,3 +1,5 @@
+import { Employer } from "@/enums";
+
 export type CareerTimelineItem = {
   company: string;
   link: string;
@@ -8,4 +10,8 @@ export type CareerTimelineItem = {
   duties?: string[];
   type: string;
   location: string;
+  techStackIcons?: string[];
+  startDate?: string;
+  endDate?: string | null;
+  key: Employer;
 };

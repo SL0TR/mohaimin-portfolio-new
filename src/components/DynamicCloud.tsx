@@ -1,13 +1,7 @@
 "use client";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
-import { useEffect, useMemo, useState } from "react";
-import {
-  fetchSimpleIcons,
-  Cloud,
-  ICloud,
-  renderSimpleIcon,
-  SimpleIcon,
-} from "react-icon-cloud";
+import useSimpleIcons from "@/hooks/useSimpleIcons";
+import { Cloud, ICloud } from "react-icon-cloud";
 
 const cloudProps: Omit<ICloud, "children"> = {
   containerProps: {
@@ -34,43 +28,13 @@ const cloudProps: Omit<ICloud, "children"> = {
   },
 };
 
-const renderCustomIcon = (icon: SimpleIcon) => {
-  // TODO: Add a tooltip with the icon name and link
-  return renderSimpleIcon({
-    icon,
-    size: 42,
-    aProps: {
-      href: undefined,
-      target: undefined,
-      rel: undefined,
-      onClick: (e: any) => e.preventDefault(),
-    },
-  });
-};
-
 export type DynamicCloudProps = {
   iconSlugs: string[];
 };
 
 export const DynamicCloud = ({ iconSlugs }: DynamicCloudProps) => {
-  const [icons, setIcons] = useState<SimpleIcon[]>();
+  const { renderedIcons } = useSimpleIcons({ iconSlugs });
   const isXlScreen = useMediaQuery("(min-width: 1400px)");
-
-  useEffect(() => {
-    fetchSimpleIcons({ slugs: iconSlugs }).then((data) => {
-      if (data.simpleIcons) {
-        setIcons(Object.values(data.simpleIcons));
-      }
-    });
-  }, [iconSlugs]);
-
-  const renderedIcons = useMemo(() => {
-    if (!icons) {
-      return null;
-    }
-
-    return icons.map((i) => renderCustomIcon(i));
-  }, [icons]);
 
   const newCloudProps: Omit<ICloud, "children"> = {
     ...cloudProps,
