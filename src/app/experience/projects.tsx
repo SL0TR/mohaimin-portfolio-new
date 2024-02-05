@@ -6,12 +6,13 @@ import {
 } from "@/enums";
 import { Project } from "../types";
 import allezThumb from "@/assets/allez.png";
-import dhThumbThumb from "@/assets/dh.png";
+import shopHobeThumb from "@/assets/shophobe.png";
 import dropshopThumb from "@/assets/dropshop.png";
 import halkhataThumb from "@/assets/halkhata.png";
 import ideezaThumb from "@/assets/ideeza.png";
 import moresailingThumb from "@/assets/moresailing.png";
-import roarThumb from "@/assets/roar.png";
+import roarWebThumb from "@/assets/roar.png";
+import roarMobileThumb from "@/assets/roar-mobile.webp";
 import sessionzThumb from "@/assets/sessionz.png";
 import shasthoThumb from "@/assets/shastho-ai.png";
 import vaccinaThumb from "@/assets/vaccina.png";
@@ -38,18 +39,15 @@ export const projects: Project[] = [
       "Opensea",
     ],
     techStack: [
+      TechStack.TYPESCRIPT,
       TechStack.REACT,
       TechStack.NEXT,
+      TechStack.AUTH0,
       TechStack.TAILWIND,
       TechStack.GITHUB_ACTIONS,
-      TechStack.AUTH0,
-      TechStack.NODE,
-      TechStack.NEST,
-      TechStack.POSTGRESQL,
       TechStack.CSS,
       TechStack.JAVASCRIPT,
       TechStack.HTML,
-      TechStack.TYPESCRIPT,
       TechStack.STRIPE,
       TechStack.DOCKER,
       TechStack.ESLINT,
@@ -76,14 +74,14 @@ export const projects: Project[] = [
     ],
     techStack: [
       TechStack.REACT_NATIVE,
-      TechStack.CSS,
       TechStack.JAVASCRIPT,
-      TechStack.HTML,
       TechStack.TYPESCRIPT,
       TechStack.STRIPE,
       TechStack.XCODE,
       TechStack.FASTLANE,
       TechStack.ESLINT,
+      TechStack.CSS,
+      TechStack.HTML,
       TechStack.PRETTIER,
     ],
   },
@@ -108,16 +106,16 @@ export const projects: Project[] = [
       "Subscription",
     ],
     techStack: [
-      TechStack.REACT,
-      TechStack.TAILWIND,
+      TechStack.TYPESCRIPT,
       TechStack.NODE,
+      TechStack.STRIPE,
       TechStack.POSTGRESQL,
       TechStack.MYSQL,
-      TechStack.GITHUB_ACTIONS,
-      TechStack.JAVASCRIPT,
-      TechStack.TYPESCRIPT,
-      TechStack.STRIPE,
       TechStack.DOCKER,
+      TechStack.GITHUB_ACTIONS,
+      TechStack.REACT,
+      TechStack.TAILWIND,
+      TechStack.JAVASCRIPT,
       TechStack.NEXT,
       TechStack.CSS,
       TechStack.HTML,
@@ -232,7 +230,6 @@ export const projects: Project[] = [
       TechStack.REDUX_SAGA,
       TechStack.STYLED_COMPONENTS,
       TechStack.CSS,
-      TechStack.HTML,
       TechStack.HTML,
       TechStack.REST_API,
       TechStack.JWT,
@@ -370,14 +367,48 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "Roar Media",
+    name: "Roar Media Web",
     techStackType: ProjectTechStackType.FRONTEND,
     status: ProjectStatus.ONLINE,
     employer: Employer.ROAR_GLOBAL,
     description:
       "Roar Media helps global organizations reach new audiences through content that inspires change across Asia.",
-    thumbnail: roarThumb,
+    thumbnail: roarWebThumb,
     url: "https://roar.media/english/",
+    gallery: ["roar-1.png"],
+    tags: [
+      "Media",
+      "Content",
+      "News",
+      "Journalism",
+      "Asia",
+      "Global",
+      "Articles",
+    ],
+    techStack: [
+      TechStack.JAVASCRIPT,
+      TechStack.REACT,
+      TechStack.JWT,
+      TechStack.REDUX,
+      TechStack.REDUX_SAGA,
+      TechStack.STYLED_COMPONENTS,
+      TechStack.CSS,
+      TechStack.SASS,
+      TechStack.HTML,
+      TechStack.REST_API,
+      TechStack.ESLINT,
+      TechStack.PRETTIER,
+    ],
+  },
+  {
+    name: "Roar Media Mobile",
+    techStackType: ProjectTechStackType.MOBILE,
+    status: ProjectStatus.ONLINE,
+    employer: Employer.ROAR_GLOBAL,
+    description:
+      "Roar Media helps global organizations reach new audiences through content that inspires change across Asia.",
+    thumbnail: roarMobileThumb,
+    url: "https://play.google.com/store/apps/details?id=com.roarmedia&hl=en_CA&gl=US",
     gallery: ["roar-1.png"],
     tags: [
       "Media",
@@ -396,12 +427,8 @@ export const projects: Project[] = [
       TechStack.REDUX,
       TechStack.REDUX_SAGA,
       TechStack.STYLED_COMPONENTS,
-      TechStack.CSS,
-      TechStack.SASS,
-      TechStack.HTML,
       TechStack.REST_API,
       TechStack.ANDROID_STUDIO,
-      TechStack.XCODE,
       TechStack.ESLINT,
       TechStack.PRETTIER,
     ],
@@ -409,7 +436,7 @@ export const projects: Project[] = [
   {
     name: "Ideeza",
     techStackType: ProjectTechStackType.FRONTEND,
-    status: ProjectStatus.IN_DEVELOPMENT,
+    status: ProjectStatus.OFFLINE,
     employer: Employer.ROAR_GLOBAL,
     description:
       "Meet IDEEZA, the only generative AI tool for Hardware product engineering that turns text into a blueprint in seconds.",
@@ -440,13 +467,13 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "DeliveryHobe!",
+    name: "Shophobe (Now Deliveryhobe)",
     techStackType: ProjectTechStackType.FRONTEND,
-    status: ProjectStatus.ONLINE,
-    employer: Employer.ROAR_GLOBAL,
+    status: ProjectStatus.OFFLINE,
+    employer: Employer.SHIMAHIN,
     description:
-      "We power our local stores & their consumers through technology & memes.",
-    thumbnail: dhThumbThumb,
+      "Shophobe is a hyper localized multi-vendor e-commerce platform.",
+    thumbnail: shopHobeThumb,
     url: "https://www.deliveryhobe.com/",
     gallery: ["dh-1.png"],
     tags: [

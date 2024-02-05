@@ -9,6 +9,8 @@ import { CareerTimelineItem } from "../type";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Duties from "./Duties";
+import { Button } from "@/components/ui/button";
+import { IoOpenOutline } from "react-icons/io5";
 
 type TimelineCardProps = {
   item: CareerTimelineItem;
@@ -16,17 +18,19 @@ type TimelineCardProps = {
 };
 
 export default function TimelineCard({ item, side }: TimelineCardProps) {
+  const isLeft = side === "left";
+
   return (
     <>
       <Card>
-        <CardHeader>
+        <CardHeader className="max-sm:p-4">
           <CardTitle className="text-indigo-400 md:text-lg 2xl:text-xl">
             {item.position}
           </CardTitle>
           <div
             className={cn(
               "flex flex-row w-full text-right justify-end max-md:justify-start",
-              side === "right" && "justify-start"
+              !isLeft && "justify-start"
             )}
           >
             <Link href={item.link} target="_blank">
@@ -43,8 +47,15 @@ export default function TimelineCard({ item, side }: TimelineCardProps) {
         </CardHeader>
         <CardContent className="grid gap-4 ltr">
           <Duties items={item.duties} />
+          <div className="flex justify-end">
+            <Link href={`/projects?employer=${item.key}`}>
+              <Button variant="link" className="pr-0">
+                <IoOpenOutline className="mr-2" />
+                Projects
+              </Button>
+            </Link>
+          </div>
         </CardContent>
-        <div className="flex flex-row"></div>
       </Card>
     </>
   );

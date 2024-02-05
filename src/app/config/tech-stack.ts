@@ -1,7 +1,7 @@
 import { TechStack, TechStackType } from "@/enums";
 import { TechStackConfig } from "../types";
 
-const TechStackConfig: TechStackConfig = {
+export const techStackConfig: TechStackConfig = {
   [TechStack.REACT]: {
     name: "React.js",
     iconSlug: "react",
@@ -116,6 +116,7 @@ const TechStackConfig: TechStackConfig = {
     name: "Zustand",
     iconSlug: "zustand",
     type: TechStackType.FRONTEND,
+    imageUrl: "https://zustand-demo.pmnd.rs/favicon.ico",
   },
   [TechStack.STRIPE]: {
     name: "Stripe",
@@ -134,7 +135,7 @@ const TechStackConfig: TechStackConfig = {
   },
   [TechStack.REST_API]: {
     name: "REST API",
-    iconSlug: "rest",
+    iconSlug: "json",
     type: TechStackType.BACKEND,
   },
   [TechStack.NGINX]: {

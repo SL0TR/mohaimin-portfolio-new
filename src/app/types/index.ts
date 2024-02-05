@@ -22,6 +22,7 @@ export type TechStackConfig = {
     name: string;
     iconSlug: string;
     type: TechStackType;
+    imageUrl?: string;
   };
 };
 

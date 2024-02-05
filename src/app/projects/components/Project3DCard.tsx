@@ -3,6 +3,9 @@ import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { Project } from "@/app/types";
 import Link from "next/link";
 import ProjectStatusIndicator from "./ProjectStatusIndicator";
+import Icons from "@/app/experience/components/Icons";
+import { IoIosMore } from "react-icons/io";
+import { Button } from "@/components/ui/button";
 
 type Project3DCardProps = {
   project: Project;
@@ -34,13 +37,18 @@ export default function Project3DCard({ project }: Project3DCardProps) {
         <CardItem translateZ="100" className="w-full mt-4">
           <Image
             src={project.thumbnail}
-            height={project.thumbnail.height}
-            width={project.thumbnail.width}
             className="lg:h-60 h-40 w-full object-cover rounded-xl"
             alt={project.name}
           />
         </CardItem>
-        <div className="flex justify-between items-center mt-20">
+        <CardItem
+          translateZ="100"
+          className="w-full mt-4 flex gap-2 truncate items-end"
+        >
+          <Icons techStack={project.techStack.splice(0, 4)} />
+          <IoIosMore />
+        </CardItem>
+        <div className="flex justify-between items-center mt-5">
           {project.url ? (
             <Link href={project.url} target="_blank">
               <CardItem
@@ -54,12 +62,8 @@ export default function Project3DCard({ project }: Project3DCardProps) {
           ) : (
             <div />
           )}
-          <CardItem
-            translateZ={20}
-            as="button"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-          >
-            Learn More
+          <CardItem translateZ={20}>
+            <Button size="sm">View more</Button>
           </CardItem>
         </div>
       </CardBody>

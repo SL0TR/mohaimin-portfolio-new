@@ -18,7 +18,7 @@ export default function Duties({ items = [] }: DutyListProps) {
   return (
     <div
       className={cn(
-        "flex items-center space-x-4 rounded-md border p-4 overflow-hidden relative pb-10 transition-all duration-300 ease-in-out ",
+        "flex items-center space-x-4 rounded-md lg:border lg:p-4 p-0 overflow-hidden relative !pb-10 transition-all duration-300 ease-in-out ",
         canSeeMore && "overflow-auto pb-4"
       )}
     >
@@ -37,7 +37,7 @@ export default function Duties({ items = [] }: DutyListProps) {
             key={duty}
           >
             <IoIosArrowForward className="absolute left-0 top-1" />{" "}
-            <p>{duty}</p>
+            <p className="text-xs">{duty}</p>
           </li>
         ))}
       </ul>
@@ -46,7 +46,7 @@ export default function Duties({ items = [] }: DutyListProps) {
           <Button
             onClick={handleSeeMore}
             variant="link"
-            className="dark:text-slate-300"
+            className="dark:text-slate-300 lg:text-sm text-xs"
           >
             ...See more{" "}
           </Button>

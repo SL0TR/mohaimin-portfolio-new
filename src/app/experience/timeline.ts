@@ -18,13 +18,12 @@ const careerTimeline: CareerTimelineItem[] = [
       "Led the multi-tenant NFT minting admin ReactJS web app, while also playing a significant role in shaping the NextJS NFT e-commerce platform for Dropshop",
       "Revamped Sessionz's mobile app by transitioning it to the latest React Native version, ensuring compatibility for future enhancements and feature additions. Successfully deployed the updated version to the AppStore, introducing a dynamic Events feature.",
     ],
-    techStackIcons: ["javascript", "typescript", "react", "nextdotjs"],
     key: Employer.CROWDLINKER,
   },
   {
     company: "Strativ AB",
     link: "https://strativ.se/",
-    position: "Senior Full Stack Developer (Team Lead)",
+    position: "Senior Full Stack Developer",
     date: "May 2020 - Jan 2022",
     startDate: "2020-05-01",
     endDate: "2022-01-01",
@@ -39,7 +38,6 @@ const careerTimeline: CareerTimelineItem[] = [
       "Developed scalable and maintainable React and React Native boilerplates which improved coding standards and productivity of the team.",
       "Enhanced the existing recruitment process for the JavaScript stack, and helped build a great JavaScript team",
     ],
-    techStackIcons: ["javascript", "typescript", "nextdotjs", "redux"],
     key: Employer.STRATIV_AB,
   },
 
@@ -76,7 +74,6 @@ const careerTimeline: CareerTimelineItem[] = [
       "Developed an offline-first bookkeeping React Native app called Halkhata and its Backend with NodeJS which has over 50K users.",
       "Developed the marketing webapp using ReactJS",
     ],
-    techStackIcons: ["javascript", "typescript", "react", "nextdotjs", "redux"],
     key: Employer.HALKHATA,
   },
   {
@@ -93,7 +90,6 @@ const careerTimeline: CareerTimelineItem[] = [
     duties: [
       "Worked on the largest South Asian multi-lingual media platform built with React called Roar Media and it's React Native Android App",
     ],
-    techStackIcons: ["javascript", "typescript", "nextdotjs", "redux"],
     key: Employer.ROAR_GLOBAL,
   },
   {
@@ -110,7 +106,6 @@ const careerTimeline: CareerTimelineItem[] = [
       "Developed multiple web applications with modern pixel perfect design",
       "Developed a prototype messenger bot integrated with WordPress REST API with Node for Nagad",
     ],
-    techStackIcons: ["javascript", "typescript", "react", "nextdotjs", "redux"],
     key: Employer.NOTIONHIVE,
   },
   {
@@ -127,15 +122,6 @@ const careerTimeline: CareerTimelineItem[] = [
     duties: [
       "Developed various components and sections with Vue.js, HTML, CSS, and SASS for an automagical end-to-end IoT product development platform called Ideeza",
     ],
-    techStackIcons: [
-      "javascript",
-      "typescript",
-      "react",
-      "nextdotjs",
-      "redux",
-      "vue",
-      "nuxt",
-    ],
     key: Employer.IDEEZA,
   },
   {
@@ -151,14 +137,6 @@ const careerTimeline: CareerTimelineItem[] = [
       "Started to help out the residents of Dhaka during COVID, we've ended up delivering 160k orders, serving 100k+ fans and bringing in $1M+ in sales for our local shops",
     duties: [
       "Designed and developed various sections and components of a modern multi-vendor e-commerce platform called Shophobe (Now Deliveryhobe)",
-    ],
-    techStackIcons: [
-      "javascript",
-      "typescript",
-      "react",
-      "nextdotjs",
-      "redux",
-      "vue",
     ],
     key: Employer.SHIMAHIN,
   },
