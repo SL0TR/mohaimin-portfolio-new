@@ -47,7 +47,7 @@ export default function TimelineCard({ item, side }: TimelineCardProps) {
         </CardHeader>
         <CardContent className="grid gap-4 ltr">
           <Duties items={item.duties} />
-          <div className="flex justify-end">
+          <div className={cn("flex justify-end", !isLeft && "justify-start")}>
             <Link href={`/projects?employer=${item.key}`}>
               <Button variant="link" className="pr-0">
                 <IoOpenOutline className="mr-2" />

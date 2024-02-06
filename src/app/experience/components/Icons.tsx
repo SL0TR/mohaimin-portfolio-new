@@ -6,7 +6,7 @@ type IconsProps = {
   size?: number;
 };
 
-export function Icons({ techStack = [], size = 24 }: IconsProps) {
+export function IconStack({ techStack = [], size = 24 }: IconsProps) {
   function getImages() {
     return techStack.map((item) => ({
       src: techStackConfig[item]?.imageUrl
@@ -33,4 +33,4 @@ export function Icons({ techStack = [], size = 24 }: IconsProps) {
   );
 }
 
-export default Icons;
+export default IconStack;

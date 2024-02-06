@@ -12,6 +12,8 @@ type Project3DCardProps = {
 };
 
 export default function Project3DCard({ project }: Project3DCardProps) {
+  const firstFiveTechStack = project.techStack.filter((_, index) => index < 5);
+
   return (
     <CardContainer className="inter-var">
       <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-transparent dark:border-white/[0.2] border-black/[0.1] lg:w-[30rem] w-[18rem] h-auto rounded-xl p-6 border  ">
@@ -43,9 +45,10 @@ export default function Project3DCard({ project }: Project3DCardProps) {
         </CardItem>
         <CardItem
           translateZ="100"
-          className="w-full mt-4 flex gap-2 truncate items-end"
+          className="w-full mt-4 flex gap-2 flex-wrap items-end"
         >
-          <Icons techStack={project.techStack.splice(0, 4)} />
+          <Icons techStack={firstFiveTechStack} />
+          & More
           <IoIosMore />
         </CardItem>
         <div className="flex justify-between items-center mt-5">
@@ -54,7 +57,7 @@ export default function Project3DCard({ project }: Project3DCardProps) {
               <CardItem
                 translateZ={20}
                 as="button"
-                className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                className="pl-1 py-2 rounded-xl text-xs font-normal dark:text-white"
               >
                 {project.url && "Visit →"}
               </CardItem>
@@ -63,7 +66,9 @@ export default function Project3DCard({ project }: Project3DCardProps) {
             <div />
           )}
           <CardItem translateZ={20}>
-            <Button size="sm">View more</Button>
+            <Button size="sm" className="text-xs" disabled>
+              Discover
+            </Button>
           </CardItem>
         </div>
       </CardBody>

@@ -1,3 +1,4 @@
+import { projects } from "@/app/experience/projects";
 import { type ClassValue, clsx } from "clsx";
 import { SimpleIcon, renderSimpleIcon } from "react-icon-cloud";
 import { twMerge } from "tailwind-merge";
@@ -18,4 +19,17 @@ export const renderCustomIcon = (icon: SimpleIcon, size = 42) => {
       onClick: (e: any) => e.preventDefault(),
     },
   });
+};
+
+export const filteredProjectsByQuery = (query: string) => {
+  const filteredProjects = projects.filter((project) => {
+    return (
+      project.techStack.join("").includes(query) ||
+      project.tags
+        .map((t) => t.toLocaleLowerCase())
+        .join("")
+        .includes(query)
+    );
+  });
+  return filteredProjects;
 };
