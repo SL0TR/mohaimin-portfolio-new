@@ -39,16 +39,16 @@ export default function Skills() {
           onValueChange={(value) => setSelectedStacks(value as TechStack[])}
         >
           <ToggleGroupItem value={TechStack.FRONTEND} aria-label="Toggle bold">
-            Frontend
+            frontend
           </ToggleGroupItem>
           <ToggleGroupItem value={TechStack.BACKEND} aria-label="Toggle italic">
-            Backend
+            backend
           </ToggleGroupItem>
           <ToggleGroupItem
             value={TechStack.TOOLS}
             aria-label="Toggle underline"
           >
-            Tools
+            tools
           </ToggleGroupItem>
         </ToggleGroup>
         <DynamicCloud iconSlugs={getStackIconSlugs()} />
