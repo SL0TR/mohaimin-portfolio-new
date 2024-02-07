@@ -1,12 +1,12 @@
 import UnderConstructionAlert from "@/components/UnderConstructionAlert";
-import PageContainer from "@/components/ui/page-container";
+import PageTransition from "@/components/ui/page-transition";
 
 export default function Notfound() {
   return (
-    <PageContainer>
+    <PageTransition>
       <div className="flex justify-center items-center h-full w-full">
         <UnderConstructionAlert />
       </div>
-    </PageContainer>
+    </PageTransition>
   );
 }

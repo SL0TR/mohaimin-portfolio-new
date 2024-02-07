@@ -1,13 +1,13 @@
-import PageContainer from "@/components/ui/page-container";
+import PageTransition from "@/components/ui/page-transition";
 import ContactForm from "./components/ContactForm";
 
 function ContactPage() {
   return (
-    <PageContainer>
+    <PageTransition>
       <div className="flex justify-center items-center h-full w-full">
         <ContactForm />
       </div>
-    </PageContainer>
+    </PageTransition>
   );
 }
 

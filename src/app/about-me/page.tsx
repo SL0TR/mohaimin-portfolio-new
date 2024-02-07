@@ -1,10 +1,10 @@
-import PageContainer from "@/components/ui/page-container";
+import PageTransition from "@/components/ui/page-transition";
 import About from "./components/About";
 
 export default function AboutPage() {
   return (
-    <PageContainer>
+    <PageTransition>
       <About />
-    </PageContainer>
+    </PageTransition>
   );
 }

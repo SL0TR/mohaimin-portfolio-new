@@ -1,12 +1,12 @@
 import React from "react";
 import Experience from "./components/Experience";
-import PageContainer from "@/components/ui/page-container";
+import PageTransition from "@/components/ui/page-transition";
 
 function ExperiencePage() {
   return (
-    <PageContainer>
+    <PageTransition>
       <Experience />
-    </PageContainer>
+    </PageTransition>
   );
 }
 

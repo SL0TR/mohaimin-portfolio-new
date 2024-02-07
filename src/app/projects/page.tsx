@@ -1,11 +1,11 @@
-import PageContainer from "@/components/ui/page-container";
+import PageTransition from "@/components/ui/page-transition";
 import Projects from "./components/Projects";
 
 function ProjectsPage() {
   return (
-    <PageContainer>
+    <PageTransition>
       <Projects />
-    </PageContainer>
+    </PageTransition>
   );
 }
 
