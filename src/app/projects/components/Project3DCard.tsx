@@ -67,7 +67,7 @@ export default function Project3DCard({ project }: Project3DCardProps) {
           )}
           <CardItem translateZ={20}>
             <Button size="sm" className="text-xs" disabled>
-              Discover
+              view-details
             </Button>
           </CardItem>
         </div>

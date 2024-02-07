@@ -1,10 +1,11 @@
+import PageContainer from "@/components/ui/page-container";
 import Projects from "./components/Projects";
 
 function ProjectsPage() {
   return (
-    <section className="grow overflow-hidden">
+    <PageContainer>
       <Projects />
-    </section>
+    </PageContainer>
   );
 }
 

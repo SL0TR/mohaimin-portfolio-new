@@ -51,7 +51,7 @@ export default function TimelineCard({ item, side }: TimelineCardProps) {
             <Link href={`/projects?employer=${item.key}`}>
               <Button variant="link" className="pr-0">
                 <IoOpenOutline className="mr-2" />
-                Projects
+                _projects
               </Button>
             </Link>
           </div>

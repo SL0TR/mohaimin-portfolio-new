@@ -1,12 +1,14 @@
-import UnderConstructionAlert from "@/components/UnderConstructionAlert";
 import PageContainer from "@/components/ui/page-container";
+import ContactForm from "./components/ContactForm";
 
-export default function Notfound() {
+function ContactPage() {
   return (
     <PageContainer>
       <div className="flex justify-center items-center h-full w-full">
-        <UnderConstructionAlert />
+        <ContactForm />
       </div>
     </PageContainer>
   );
 }
+
+export default ContactPage;

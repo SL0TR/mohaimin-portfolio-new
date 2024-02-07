@@ -1,11 +1,12 @@
 import React from "react";
 import Experience from "./components/Experience";
+import PageContainer from "@/components/ui/page-container";
 
 function ExperiencePage() {
   return (
-    <section className="grow overflow-hidden">
+    <PageContainer>
       <Experience />
-    </section>
+    </PageContainer>
   );
 }
 

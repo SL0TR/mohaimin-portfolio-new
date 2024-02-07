@@ -1,4 +1,3 @@
-import { LuConstruction } from "react-icons/lu";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
@@ -14,9 +13,7 @@ export default function UnderConstructionAlert() {
         </span>
       </AlertTitle>
       <AlertDescription className="flex items-center mt-3 justify-center">
-        <LuConstruction className="mr-2" />
-        This page is under construction
-        <LuConstruction className="ml-2" />
+        This page does not exist.
       </AlertDescription>
       <AlertDescription className="flex items-center my-4 justify-center ">
         <Button size="sm">
@@ -26,7 +23,7 @@ export default function UnderConstructionAlert() {
         <Button className="ml-2" size="sm" variant="link">
           <FaGithub className="mr-2" />
           <Link target="_blank" href="https://github.com/SL0TR/mohaimin.me">
-            View code
+            Explore code
           </Link>
         </Button>
       </AlertDescription>
