@@ -3,15 +3,21 @@ import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { Project } from "@/app/types";
 import Link from "next/link";
 import ProjectStatusIndicator from "./ProjectStatusIndicator";
-import Icons from "@/app/experience/components/Icons";
+import Icons from "@/components/IconStack";
 import { IoIosMore } from "react-icons/io";
 import { Button } from "@/components/ui/button";
 
 type Project3DCardProps = {
   project: Project;
+  index: number;
+  onViewDetails: (idx: number) => void;
 };
 
-export default function Project3DCard({ project }: Project3DCardProps) {
+export default function Project3DCard({
+  project,
+  index,
+  onViewDetails,
+}: Project3DCardProps) {
   const firstFiveTechStack = project.techStack.filter((_, index) => index < 5);
 
   return (
@@ -20,7 +26,7 @@ export default function Project3DCard({ project }: Project3DCardProps) {
         <div className="flex flex-row w-full justify-between">
           <CardItem
             translateZ="50"
-            className="text-xl font-bold text-indigo-400"
+            className="text-xl max-sm:text-base font-bold text-indigo-400"
           >
             {project.name}
           </CardItem>
@@ -32,7 +38,7 @@ export default function Project3DCard({ project }: Project3DCardProps) {
         <CardItem
           as="p"
           translateZ="60"
-          className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 truncate w-full"
+          className="text-neutral-500 text-sm max-sm:text-xs max-w-sm mt-2 dark:text-neutral-300 truncate w-full"
         >
           {project.description}
         </CardItem>
@@ -66,7 +72,11 @@ export default function Project3DCard({ project }: Project3DCardProps) {
             <div />
           )}
           <CardItem translateZ={20}>
-            <Button size="sm" className="text-xs" disabled>
+            <Button
+              size="sm"
+              className="text-xs"
+              onClick={() => onViewDetails(index)}
+            >
               view-details
             </Button>
           </CardItem>

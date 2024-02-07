@@ -24,7 +24,7 @@ export default function FilterSearch() {
     }
 
     replace(`${pathname}?${params.toString()}`);
-  }, [debouncedValue]);
+  }, [debouncedValue, pathname, replace, searchParams]);
 
   return (
     <>

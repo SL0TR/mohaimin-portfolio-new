@@ -12,7 +12,7 @@ import halkhataThumb from "@/assets/halkhata.png";
 import ideezaThumb from "@/assets/ideeza.png";
 import moresailingThumb from "@/assets/moresailing.png";
 import roarWebThumb from "@/assets/roar.png";
-import roarMobileThumb from "@/assets/roar-mobile.webp";
+import roarMobileThumb from "@/assets/roar-mobile.png";
 import sessionzThumb from "@/assets/sessionz.png";
 import shasthoThumb from "@/assets/shastho-ai.png";
 import vaccinaThumb from "@/assets/vaccina.png";
@@ -52,9 +52,7 @@ export const projects: Project[] = [
       TechStack.AUTH0,
       TechStack.TAILWIND,
       TechStack.GITHUB_ACTIONS,
-      TechStack.CSS,
       TechStack.JAVASCRIPT,
-      TechStack.HTML,
       TechStack.STRIPE,
       TechStack.DOCKER,
       TechStack.ESLINT,
@@ -67,7 +65,7 @@ export const projects: Project[] = [
     employer: Employer.CROWDLINKER,
     status: ProjectStatus.ONLINE,
     description:
-      "Based in the vibrant city of Toronto, Canada, Sessionz is an innovative educational technology platform driven by a powerful vision: to make education accessible to all, regardless of background or location.",
+      "Based in Toronto, Canada, Sessionz is an innovative educational technology platform driven by a powerful vision: to make education accessible to all.",
     thumbnail: sessionzThumb,
     url: "https://sessionz.com",
     gallery: ["sessionz-1.png"],
@@ -91,8 +89,6 @@ export const projects: Project[] = [
       TechStack.XCODE,
       TechStack.FASTLANE,
       TechStack.ESLINT,
-      TechStack.CSS,
-      TechStack.HTML,
       TechStack.PRETTIER,
     ],
   },
@@ -131,8 +127,6 @@ export const projects: Project[] = [
       TechStack.TAILWIND,
       TechStack.JAVASCRIPT,
       TechStack.NEXT,
-      TechStack.CSS,
-      TechStack.HTML,
       TechStack.REACT_QUERY,
       TechStack.ZUSTAND,
       TechStack.JEST,
@@ -171,8 +165,6 @@ export const projects: Project[] = [
       TechStack.GITHUB_ACTIONS,
       TechStack.DOCKER,
       TechStack.NEXT,
-      TechStack.CSS,
-      TechStack.HTML,
       TechStack.REACT_QUERY,
       TechStack.ZUSTAND,
       TechStack.REACT_TESTING_LIBRARY,
@@ -285,8 +277,6 @@ export const projects: Project[] = [
       TechStack.MONGODB,
       TechStack.DOCKER,
       TechStack.PM2,
-      TechStack.GITHUB_ACTIONS,
-      TechStack.GITHUB_ACTIONS,
       TechStack.REACT_NATIVE,
       TechStack.SOCKET_IO,
       TechStack.REACT_QUERY,
@@ -316,7 +306,6 @@ export const projects: Project[] = [
       "Pharmacy",
       "Payment Gateway",
       "Booking Platform",
-      "Appointment Scheduling",
       "Digital Prescription",
       "Patient Management",
       "Patient History",
@@ -346,23 +335,16 @@ export const projects: Project[] = [
     status: ProjectStatus.OFFLINE,
     employer: Employer.HALKHATA,
     description:
-      "Digitize your business using the Halkhata app and manage all your transacitons simply and effortlessly. Gone are the days of doing business using pen and paper. The Halkhata app is the new way of doing business credit lending replacing the age-old manual process of recording on register khata.",
+      "Digitize your business using the Halkhata app and manage all your transacitons simply and effortlessly. Gone are the days of doing business using pen and paper.",
     thumbnail: halkhataThumb,
     url: "https://www.9apps.com/android-apps/com-halkhata/",
     gallery: ["halkhata-1.png"],
     tags: [
-      "Business",
       "Credit Lending",
-      "Digital Transaction",
-      "Accounting",
-      "Customer Management",
       "Payment Gateway",
       "B2C",
       "Fintech",
       "Digital Payment",
-      "Calender Management",
-      "Reminder",
-      "Digital Bookkeeping",
       "Digital Ledger",
       "SaaS",
     ],
@@ -379,8 +361,6 @@ export const projects: Project[] = [
       TechStack.REDUX,
       TechStack.REDUX_SAGA,
       TechStack.STYLED_COMPONENTS,
-      TechStack.CSS,
-      TechStack.HTML,
       TechStack.REST_API,
       TechStack.ANDROID_STUDIO,
       TechStack.ESLINT,
