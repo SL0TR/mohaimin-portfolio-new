@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const renderCustomIcon = (icon: SimpleIcon, size = 42) => {
+export function renderCustomIcon(icon: SimpleIcon, size = 42) {
   // TODO: Add a tooltip with the icon name and link
   return renderSimpleIcon({
     icon,
@@ -20,27 +20,34 @@ export const renderCustomIcon = (icon: SimpleIcon, size = 42) => {
       onClick: (e: any) => e.preventDefault(),
     },
   });
-};
+}
 
-export const filteredProjectsByQuery = (query: string) => {
+export function hasQueryMatchedWithString(
+  matchAgainstString: string,
+  queryString: string
+) {
+  return new RegExp(`\\b${queryString}\\b`).test(matchAgainstString);
+}
+
+export function filteredProjectsByQuery(query: string) {
   const lowerCaseQuery = query.toLowerCase();
 
-  console.log(lowerCaseQuery);
-
   const filteredProjects = projects.filter((project) => {
+    const techStackString = project.techStack
+      .map((t) => t.toLowerCase().replace("-", " "))
+      .join(" ");
+
+    const projectTagsString = project.tags
+      .map((t) => t.toLowerCase())
+      .join(" ");
+
     return (
-      project.techStack
-        .map((t) => t.toLowerCase())
-        .join("")
-        .includes(lowerCaseQuery) ||
-      project.tags
-        .map((t) => t.toLowerCase())
-        .join("")
-        .includes(lowerCaseQuery)
+      hasQueryMatchedWithString(techStackString, lowerCaseQuery) ||
+      hasQueryMatchedWithString(projectTagsString, lowerCaseQuery)
     );
   });
   return filteredProjects;
-};
+}
 
 export function sendEmail(data: ContactFormValues) {
   const apiEndpoint = "/api/email";

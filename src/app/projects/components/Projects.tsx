@@ -9,16 +9,18 @@ import { projects } from "@/app/experience/projects";
 
 export default function Projects() {
   const { filteredProjects } = useFilteredProjects();
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [selectedProjectIdx, setSelectedProjectIdx] = useState<number>(0);
+  const [selectedProjectIdx, setSelectedProjectIdx] = useState<number | null>(
+    null
+  );
+
+  const isDialogOpen = selectedProjectIdx !== null;
 
   function toggleDialog() {
-    setIsDialogOpen((prev) => !prev);
+    setSelectedProjectIdx(null);
   }
 
   function handleProjectSelect(idx: number) {
     setSelectedProjectIdx(idx);
-    toggleDialog();
   }
 
   return (
@@ -30,7 +32,7 @@ export default function Projects() {
       </div>
       <ScrollArea>
         <div className="mt-12 lg:mt-10 h-full lg:p-10 p-5 mx-auto grid gap-10 xl:grid-cols-auto-fit-30 grid-cols-auto-fit-18">
-          {filteredProjects.map((project, index) => (
+          {filteredProjects?.map((project, index) => (
             <Project3DCard
               key={project.name}
               index={index}
@@ -41,11 +43,13 @@ export default function Projects() {
         </div>
         <div className="h-150" />
       </ScrollArea>
-      <ProjectDialog
-        project={projects?.[selectedProjectIdx]}
-        isOpen={isDialogOpen}
-        toggleDialog={toggleDialog}
-      />
+      {isDialogOpen && (
+        <ProjectDialog
+          project={filteredProjects?.[selectedProjectIdx!]}
+          isOpen={isDialogOpen}
+          toggleDialog={toggleDialog}
+        />
+      )}
     </>
   );
 }

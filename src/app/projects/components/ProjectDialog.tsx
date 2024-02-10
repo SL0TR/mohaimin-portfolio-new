@@ -35,7 +35,7 @@ export default function ProjectDialog({
           <IconStack techStack={project.techStack} />
         </div>
         <Image
-          className="rounded-1 py-2 max-sm:py-1"
+          className="rounded-1 py-2 max-sm:py-1 max-md:max-h-[220px] max-md:object-fit"
           src={project.thumbnail}
           alt={project.name}
           width={project.thumbnail.width}
