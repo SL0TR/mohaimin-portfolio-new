@@ -1,4 +1,4 @@
-import { techStackConfig } from "@/app/config/tech-stack";
+import { techStackConfig } from "@/config/tech-stack";
 import { TechStack } from "@/enums";
 
 type IconsProps = {

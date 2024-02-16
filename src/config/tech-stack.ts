@@ -1,5 +1,5 @@
 import { TechStack, TechStackType } from "@/enums";
-import { TechStackConfig } from "../types";
+import { TechStackConfig } from "../app/types";
 
 export const techStackConfig: TechStackConfig = {
   [TechStack.REACT]: {
